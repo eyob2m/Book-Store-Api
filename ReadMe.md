@@ -35,6 +35,8 @@ Follow these steps to set up the project in your development environment:
 | `GET`    | `/books/fav`                | Retrieve all favorite books.                 |
 | `GET`    | `/books/recommendation`     | Get a random book as a recommendation.       |
 
+> Note : all endpoints with prefix {host}:{port}/api/{endpoint}
+
 ### **Request/Response Examples:**
 
 #### Add a new book:
