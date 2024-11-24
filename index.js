@@ -9,7 +9,9 @@ app.use('/api/books', booksRouter)
 
 // eslint-disable-next-line no-undef
 const PORT = process.env.PORT
-
+app.get('/api',(req,res)=>{
+    res.send('Welcome to Book Store api. You can refer endpoints from github readme file here: https://github.com/eyob2m/Book-Store-Api\n Made by eyob2m')
+})
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
 
