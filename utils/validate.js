@@ -20,7 +20,7 @@ export const validate = async (data) => {
     if (isNaN(data?.pub_year)){
         error.push('Year must be a number')
     }
-    if (!/[0-9]+/.test(data?.isbn)) {
+    if (!/^[0-9- ^w]+$/.test(data?.isbn)) {
         error.push('Invalid ISBN')
     }
     if (error.length == 0) {

@@ -5,7 +5,7 @@ import { validate } from "../utils/validate.js"
 
 export const getBooks = async (req, res, next) => {
     try {
-        const books = await Books.find({})
+        const books = await Books.find({}).select('-__v')
         res.status(200).json({ success: true, books: books })
     } catch (error) {
         next(error)
@@ -72,10 +72,10 @@ export const deleteBook = async (req, res, next) => {
 }
 export const recommBooks = async (req, res, next) => {
     try {
-        const books = await Books.find({})
+        const books = await Books.find({}).select('-__v')
         let len = books.length
         console.log(`len: ${len}`)
-        let num = Math.floor(Math.random()*len)
+        let num = Math.floor(Math.random() * len)
         console.log(`ran: ${num}`)
         res.status(200).json({ success: true, recommBook: books[num] })
     } catch (error) {
@@ -130,7 +130,7 @@ export const unfavBook = async (req, res, next) => {
 }
 export const getfavBooks = async (req, res, next) => {
     try {
-        const books = await Books.find({ fav: true })
+        const books = await Books.find({ fav: true }).select('-__v')
         res.status(200).json({ success: true, favBooks: books })
     } catch (error) {
         next(error)
