@@ -21,8 +21,8 @@ app.use((err, req, res, next) => {
 app.use((req, res) => {
     return res.status(404).json({ success: false, error: "Not Found" })
 })
-app.listen(PORT, () => {
+app.listen(PORT,  async () => {
     console.log(`Server started on PORT ${PORT}`)
-    connectDB()
+   await connectDB()
 
 })
