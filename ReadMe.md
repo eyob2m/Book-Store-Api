@@ -36,7 +36,8 @@ Follow these steps to set up the project in your development environment:
 | `GET`    | `/books/recommendation`     | Get a random book as a recommendation.       |
 
 > Note : all endpoints with prefix `/api/` like `{host}:{port}/api/{endpoint}`
-
+>
+> EXample: to get all books use `GET` method to `https://book-store-api-a3gy.onrender.com/api/books`
 ### **Request/Response Examples:**
 
 #### Add a new book:
