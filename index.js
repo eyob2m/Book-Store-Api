@@ -2,10 +2,12 @@ import express from 'express'
 import dotenv from 'dotenv'
 import { connectDB } from './config/connectDB.js'
 import booksRouter from './routes/booksRoute.js'
+import userRouter from './routes/authRoute.js'
 dotenv.config()
 const app = express()
 app.use(express.json())
 app.use('/api/books', booksRouter)
+app.use('/api/auth', userRouter)
 
 // eslint-disable-next-line no-undef
 const PORT = process.env.PORT

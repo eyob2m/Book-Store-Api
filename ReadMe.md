@@ -37,6 +37,13 @@ Follow these steps to set up the project in your development environment:
 
 > Note : all endpoints with prefix `/api/` like `{host}:{port}/api/{endpoint}`
 >
+
+## Stage 3 Updates
+- user login and sign up at /api/auth/login and /api/auth/signup
+- /api/books -> Only can accessd by admin
+- User need to be autorized to access all routes
+
+
 > EXample: to get all books use `GET` method to `https://book-store-api-a3gy.onrender.com/api/books`
 ### **Request/Response Examples:**
 
